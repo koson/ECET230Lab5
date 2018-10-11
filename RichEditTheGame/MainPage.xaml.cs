@@ -125,5 +125,12 @@ namespace RichEditTheGame
                 selectedText.CharacterFormat = charFormatting;
             }
         }
+
+        private void FontColourRed(object sender, RoutedEventArgs e) {
+
+        }
+
+        private void FontColourBlack()
+
     }
 }
