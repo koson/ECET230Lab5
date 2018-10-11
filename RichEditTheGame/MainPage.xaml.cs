@@ -126,11 +126,21 @@ namespace RichEditTheGame
             }
         }
 
-        private void FontColourRed(object sender, RoutedEventArgs e) {
-
+        private void FontHighlight(object sender, RoutedEventArgs e) {
+            Windows.UI.Text.ITextSelection selectedText = editor.Document.Selection;
+            if (selectedText != null) {
+                Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
+                if (charFormatting.BackgroundColor == Windows.UI.Colors.White) {
+                    charFormatting.BackgroundColor = Windows.UI.Colors.Yellow;
+                }
+                else {
+                    charFormatting.Underline = Windows.UI.Colors.White;
+                }
+                selectedText.CharacterFormat = charFormatting;
+            }
         }
 
-        private void FontColourBlack()
+
 
     }
 }
