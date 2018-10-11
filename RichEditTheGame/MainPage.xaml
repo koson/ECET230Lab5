@@ -15,12 +15,15 @@
                     <Setter Property="IsCompact" Value="True"/>
                 </Style>
             </RelativePanel.Resources>
+            
+            <!--BUTTONS            
+            //Open/Save -->
             <AppBarButton x:Name="openFileButton" Icon="OpenFile" 
                    Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
             <AppBarButton Icon="Save" Click="SaveButton_Click" 
                    ToolTipService.ToolTip="Save file" 
                    RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
-
+            <!--Bold/Italic/Underline-->
             <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold" 
                    RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
             <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click" 
@@ -28,7 +31,7 @@
             <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click" 
                    ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
 
-
+            <!--EDIT BOX-->
             <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton" 
                   RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
         </RelativePanel>

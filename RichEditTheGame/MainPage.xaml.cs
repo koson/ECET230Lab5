@@ -27,6 +27,8 @@ namespace RichEditTheGame
             this.InitializeComponent();
         }
 
+
+        //OPEN/SAVE
         private async void OpenButton_Click(object sender, RoutedEventArgs e) {
             // Open a text file.
             Windows.Storage.Pickers.FileOpenPicker open =
@@ -89,6 +91,9 @@ namespace RichEditTheGame
             }
         }
 
+
+        //EDIT buttons
+
         private void BoldButton_Click(object sender, RoutedEventArgs e) {
             Windows.UI.Text.ITextSelection selectedText = editor.Document.Selection;
             if (selectedText != null) {
@@ -99,10 +104,10 @@ namespace RichEditTheGame
         }
 
         private void ItalicButton_Click(object sender, RoutedEventArgs e) {
-            Windows.UI.Text.ITextSelection selectedText = editor.Document.Selection;
-            if (selectedText != null) {
+            Windows.UI.Text.ITextSelection selectedText = editor.Document.Selection; //check for selected text, either highlighted or a point
+            if (selectedText != null) { //should be != null in most cases
                 Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
-                charFormatting.Italic = Windows.UI.Text.FormatEffect.Toggle;
+                charFormatting.Italic = Windows.UI.Text.FormatEffect.Toggle;//toggle italics
                 selectedText.CharacterFormat = charFormatting;
             }
         }
