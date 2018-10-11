@@ -126,15 +126,15 @@ namespace RichEditTheGame
             }
         }
 
-        private void FontHighlight(object sender, RoutedEventArgs e) {
+        private void HighlightButton_Click(object sender, RoutedEventArgs e) {
             Windows.UI.Text.ITextSelection selectedText = editor.Document.Selection;
             if (selectedText != null) {
                 Windows.UI.Text.ITextCharacterFormat charFormatting = selectedText.CharacterFormat;
-                if (charFormatting.BackgroundColor == Windows.UI.Colors.White) {
-                    charFormatting.BackgroundColor = Windows.UI.Colors.Yellow;
+                if (charFormatting.BackgroundColor == Windows.UI.Colors.White) { //Check if unhighlighted
+                    charFormatting.BackgroundColor = Windows.UI.Colors.Yellow;   //highlight
                 }
-                else {
-                    charFormatting.Underline = Windows.UI.Colors.White;
+                else {                                                          //oh but it was already highlight
+                    charFormatting.BackgroundColor = Windows.UI.Colors.White;   //too bad so sad
                 }
                 selectedText.CharacterFormat = charFormatting;
             }
