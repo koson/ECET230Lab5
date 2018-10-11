@@ -24,7 +24,9 @@
                    ToolTipService.ToolTip="Save file" 
                    RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
             <!--Bold/Italic/Underline-->
-            <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold" 
+            <AppBarButton x:Name="BoldButton"  Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold" 
+                   RelativePanel.LeftOf="BoldButton2" Margin="0,0,8,0"/>
+            <AppBarButton x:Name="BoldButton2" Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold2" 
                    RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
             <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click" 
                    ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
