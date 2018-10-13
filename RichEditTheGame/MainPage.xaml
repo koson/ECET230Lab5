@@ -23,13 +23,15 @@
             <AppBarButton Icon="Save" Click="SaveButton_Click" 
                    ToolTipService.ToolTip="Save file" 
                    RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
-            <!--Bold/Italic/Underline-->
+            <!--Bold/Italic/Underline/buttons-->
             <AppBarButton x:Name="BoldButton"  Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold" 
                    RelativePanel.LeftOf="BoldButton2" Margin="0,0,8,0"/>
             <AppBarButton x:Name="BoldButton2" Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold2" 
                    RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
             <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click" 
-                   ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
+                   ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="highlightButton" Margin="0,0,8,0"/>
+            <AppBarButton x:Name="highlightButton" Icon="Highlight" Click="HighlightButton_Click" 
+                   ToolTipService.ToolTip="Highlight" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
             <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click" 
                    ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
 
